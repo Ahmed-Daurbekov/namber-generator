@@ -1,0 +1,422 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+body {
+    background: #888888;
+    font-family: 'Lobster', cursive;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.content {
+    padding: 0 15px;
+}
+
+.layer {
+    max-width: 900px;
+    min-height: 550px;
+    margin: 0 auto;
+    margin-top: 65px;
+    padding: 5px 10px;
+    background: #3a3a39;
+    box-shadow: 0 0 15px 8px black;
+    border-radius: 5px;
+}
+/* ------ */
+.current__date {
+    padding-top: 30px;
+}
+.current-date__text {
+    user-select: none;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 2px red, 0 0 25px red;
+}
+
+.current-date__number, .current-date__numbers {
+    font-size: 120px;
+    text-align: center;
+    text-shadow: 1px 1px 2px red, 0 0 25px red;
+}
+
+.previous-date__text {
+    user-select: none;
+    text-align: center;
+    font-size: 30px;
+    text-shadow: 1px 1px 2px #48ff00, 0 0 25px #48ff00;
+}
+
+.previous-date__number {
+    text-align: center;
+    font-size: 90px;
+    text-shadow: 1px 1px 2px #48ff00, 0 0 25px #48ff00;
+}
+
+.btn {
+    width: 100%;
+    height: 50px;
+    background: #ffa500;
+    font-family: 'Lobster', cursive;
+    font-size: 24px;
+    outline: none;
+    border: 3px solid #ac7105;
+    border-radius: 10px;
+    user-select: none;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 15px;
+    transition: 0.2s ease;
+}
+
+.btn:active {
+    font-size: 22px;
+    box-shadow: inset 0 0 3px 3px #97740f;
+}
+
+.values {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.input {
+    outline: none;
+    width: 70px;
+    text-align: right;
+    padding: 3px 0;
+    padding-right: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.value-1, .value-2 {
+    position: relative;
+}
+
+.no-repeat {
+    margin-top: 8px;
+    display: flex;
+}
+
+.no-repeat i {
+    user-select: none;
+    font-size: 19px;
+    margin-left: -20px;
+    color: #ffffff;
+}
+
+#check {
+    position: relative;
+    width: 55px;
+    height: 23px;
+    background: #525252;
+    border-radius: 15px;
+    -webkit-appearance: none;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+#check::before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #fb0000;
+    border-radius: 20px;
+    left: -1px;
+    top: -2px;
+    transition: 0.2s linear;
+}
+
+#check:checked:before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #48ff00;
+    box-shadow: 0 0 10px 1px #48ff00;
+    border-radius: 20px;
+    left: 29px;
+    top: -2px;
+}
+
+.switch-btn {
+    position: relative;
+    font-family: serif;
+    font-style: italic;
+    font-weight: bold;
+    user-select: none;
+    transition: 0.2s linear;
+}
+.on {
+    right: 47px;
+    cursor: pointer;
+    top: 1px;
+    opacity: 0;
+    z-index: -1;
+}
+
+.off {
+    right: 44px;
+    cursor: pointer;
+    top: 1px;
+    color: #fff;
+}
+
+#check:checked ~ .on {
+    color: #fff;
+    opacity: 1;
+    z-index: 1;
+}
+
+#check:checked ~ .off {
+    color: #fff;
+    opacity: 0;
+    z-index: -1;
+}
+
+label {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    color: #625F5F;
+    transition: 0.2s linear;
+}
+
+label.active {
+    transition: 0.2s linear;
+    top: -20px;
+    left: 5px;
+    color: #000;
+}
+
+.footer {
+    margin-top: auto;
+    padding: 0 15px;
+    padding-top: 20px;
+}
+/* --------------- */
+.count-namber {
+    margin-top: 15px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.count-namber__text {
+    user-select: none;
+    font-size: 19px;
+    margin-left: -20px;
+    color: #ffffff;
+}
+
+input[type=range] {
+    width: 200px;
+    -ms-appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+    display: block;
+    margin: 10px 0 0 0;
+    position: relative;
+  }
+  
+  input[type=range]::before,
+  input[type=range]::after {
+    display: inline-block;
+    position: absolute;
+    bottom: -5px;
+    color: #888;
+  }
+  
+  input[type=range]::before {
+    content: attr(min);
+    left: 0;
+    transform: translate(calc(-100% - 5px))
+  }
+  
+  input[type=range]::after {
+    content: attr(max);
+    right: 0;
+    transform: translate(calc(100% + 5px))
+  }
+  
+  /* input[type=range]::-moz-range-track,  */
+  /* input[type=range]::-ms-track */
+  input[type=range]::-webkit-slider-runnable-track {
+    background: #222;
+    border-radius: 3px;
+    height: 5px;
+    -webkit-appearance: none;
+  }
+  
+  /* input[type=range]::-moz-range-thumb */
+  /* input[type=range]::-ms-thumb */
+  input[type=range]::-webkit-slider-thumb {
+    border: none;
+    box-shadow: none;
+    height: 20px;
+    width: 8px;
+    border-radius: 12px;
+    background: #0097f0;
+    -webkit-appearance: none;
+    margin: -7px 0 0 0;
+    outline: none;
+  }
+  
+  .custom-range-slider {
+    position: relative;
+    padding-bottom: 50px;
+    color: #888;
+  }
+  
+  .custom-range-slider .bubble {
+    padding: 5px;
+    border-radius: 3px;
+    background: #999;
+    display: inline-block;
+    color: #fff;
+    font-size: 10px;
+    text-align: center;
+    position: absolute;
+    top: 45px;
+    transform: translateX(-50%);
+    transition: background 0.3s ease;
+  }
+  
+  .custom-range-slider:hover .bubble {
+    background: #0097f0;
+  }
+  
+/* --------------- */
+.footer .container {
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 10px 10px 0 0;
+    background: #3a3a39;
+    padding: 10px;
+    box-shadow: 0 0 15px 8px black;
+}
+
+.about-us a {
+    text-decoration: none;
+    color: #0023DA;
+}
+
+.social-networks {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.social-networks__text {
+    font-size: 19px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.social-networks__links {
+    display: flex;
+}
+
+.social-networks__link {
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+    position: relative;
+}
+
+.social-networks__link img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.social-networks__links li {
+    margin-right: 10px;
+}
+.social-networks__links li:last-child {
+    margin-right: 0px;
+}
+
+.instagram {
+    border-radius: 7px;
+    background: radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%), radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%), radial-gradient(ellipse farthest-corner at 0 -25%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 20% -50%, #5258cf, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 0, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 60% -20%, #893dc2, transparent 50%), radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent), linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
+    box-shadow: 0 0 10px 4px #bc318f;
+}
+
+.facebook {
+    border-radius: 20px;
+    background: #4867aa;
+    box-shadow: 0 0 10px 4px #0841be;
+}
+
+.vk {
+    border-radius: 8px;
+    background: #2787f5;
+    box-shadow: 0 0 10px 4px #002f65;
+}
+
+.github {
+    width: 32px;
+    height: 32px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 4px #000000;
+}
+
+@media screen and (max-width: 900px) {
+    .layer {
+        margin-top: 40px;
+    }
+}
+@media screen and (max-width: 770px) {
+    .footer {
+        padding-top: 30px;
+    }
+}
+@media screen and (max-width: 430px) {
+    .layer {
+        margin-top: 30px;
+    }
+
+    .current-date__text {
+        font-size: 30px;
+    }
+
+    .previous-date__text {
+        font-size: 25px;
+    }
+
+    .previous-date__number {
+        font-size: 80px;
+    }
+
+    .current-date__number {
+        font-size: 110px;
+    }
+
+    .no-repeat {
+        margin-top: 15px;
+    }
+
+}

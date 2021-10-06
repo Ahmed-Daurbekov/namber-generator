@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор чисел</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="./img/image/шар-2.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="content">
+            <div class="layer">
+                <div class="container">
+                    <div class="current__date">
+                        <div class="current-date__text">Текущий число</div>
+                        <div class="current-date__number"></div>
+                    </div>
+                    <button class="btn">Сгенерировать</button>
+                    <div class="values">
+                        <div class="value-1">
+                            <label for="num1">min</label><input type="text" class="input minValue" value="0" id="num1">
+                        </div>
+                        <div class="value-2">
+                            <label for="num2">max</label><input type="text" class="input maxValue" value="100" id="num2">
+                        </div>
+                        <div class="no-repeat">
+                            <input type="checkbox" name="name" id="check">
+                            <span class="switch-btn on">on</span>
+                            <span class="switch-btn off">off</span>
+                            <i>Исключить повторы</i>
+                        </div>
+                    </div>
+                    <div class="count-namber">
+                        <p class="count-namber__text"><span>1</span> <i>случайное число</i></p>
+                        <input class="range" type="range" min="1" max="5" value="1">
+                    </div>
+                    <div class="previous__date">
+                        <div class="previous-date__text">Предыдущий число</div>
+                        <div class="previous-date__number"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <div class="container">
+                <div class="social-networks">
+                    <p class="social-networks__text">Ссылки на мой:</p>
+                    <ul class="social-networks__links">
+                        <li><a href="https://www.instagram.com/najl_walid/" class="social-networks__link instagram"><img src="./img/icons/instagram.svg" alt="instagram"></a></li>
+                        <li><a href="https://www.facebook.com/" class="social-networks__link facebook"><img src="./img/icons/facebook.svg" alt="facebook"></a></li>
+                        <li><a href="https://vk.com/id315693752" class="social-networks__link vk"><img src="./img/icons/vk.svg" alt="vk"></a></li>
+                        <li><a href="https://github.com/Ahmed-Daurbekov" class="social-networks__link github"><img src="./img/icons/github.svg" alt="github"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+  <script src="js/scripts.js"></script>
+</body>
+</html>
