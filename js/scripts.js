@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let min = +document.querySelector('.minValue').value;
     let max = +document.querySelector('.maxValue').value;
     let previousNumber = document.querySelector('.previous-date__number');
-    previousNumber.innerHTML = localStorage.getItem('previous');
+    console.log(localStorage.getItem('previous'));
+    previousNumber.innerHTML = localStorage.getItem('previous') || 'Нет';
     localStorage.clear()
     let currentNumber = document.querySelector('.current-date__number');
     let currentDate = Math.floor(Math.random() * (max - min)) + min;
